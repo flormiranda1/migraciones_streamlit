@@ -7,11 +7,11 @@ if st.checkbox("mostrar texto"):
     st.write("hola")
     
 
-consolidado_latino = pd.read_csv('datasets_socioeconomicosF\consolidado_latinoF.csv',sep=',', thousands=',')
-canada = pd.read_csv('datasets_socioeconomicosF\canadaF.csv',sep=',', thousands=',')
-eeuu = pd.read_csv('datasets_socioeconomicosF\eeuuF.csv',sep=',', thousands=',')
-america_latina = pd.read_csv('datasets_socioeconomicosF\\america_latinaF.csv', sep=',', thousands=',')
-consolidado_regiones = pd.read_csv("datasets_socioeconomicosF\consolidado_regionesF.csv", sep=',', thousands=',')
+consolidado_latino = pd.read_csv('consolidado_latinoF.csv',sep=',', thousands=',')
+canada = pd.read_csv('canadaF.csv',sep=',', thousands=',')
+eeuu = pd.read_csv('eeuuF.csv',sep=',', thousands=',')
+america_latina = pd.read_csv('america_latinaF.csv', sep=',', thousands=',')
+consolidado_regiones = pd.read_csv("consolidado_regionesF.csv", sep=',', thousands=',')
 
 if st.checkbox("mostrar df"):
     st.dataframe(eeuu)
