@@ -1,17 +1,12 @@
 import streamlit as st
+import streamlit_analytics
 
-st.markdown(
-    """
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-**********"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-KXFEBBX96W');
-        </script>
-    """, unsafe_allow_html=True)
+with streamlit_analytics.track():
+    st.text_input("ver dashoard")
+    st.button("Click me")
 
+# Guardar resultados en un archivo JSON
+streamlit_analytics.track(save_to_json="vistas.json")
 
 st.title("Flujos Migratorios América")
 st.markdown("***")
