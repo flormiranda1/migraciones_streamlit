@@ -1,5 +1,7 @@
 import streamlit as st
 
+streamlit_analytics.track(save_to_json="vistas.json")
+
 try:
     import streamlit_analytics
 except ImportError:
@@ -29,4 +31,3 @@ with streamlit_analytics.track():
         "...and now add `?analytics=on` to the URL to see the analytics dashboard 👀"
     )
     
-streamlit_analytics.track(save_to_json="vistas.json")
