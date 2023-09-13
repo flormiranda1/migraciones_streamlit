@@ -1,15 +1,12 @@
 import streamlit as st
-import streamlit-analytics
+import streamlit_analytics
 
-if 'last_time' not in st.session_state:
-    st.session_state.last_time = None
-
-with streamlit-analytics.track():
+with streamlit_analytics.track():
     st.text_input("ver dashoard")
     st.button("Click me")
 
 # Guardar resultados en un archivo JSON
-streamlit-analytics.track(save_to_json="vistas.json")
+streamlit_analytics.track(save_to_json="vistas.json")
 
 st.title("Flujos Migratorios América")
 st.markdown("***")
