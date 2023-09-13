@@ -1,6 +1,9 @@
 import streamlit as st
 import streamlit_analytics
 
+if 'last_time' not in st.session_state:
+    st.session_state.last_time = None
+
 with streamlit_analytics.track():
     st.text_input("ver dashoard")
     st.button("Click me")
